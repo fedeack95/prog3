@@ -12,7 +12,7 @@ public class MyIterator implements Iterator<Integer>{
 	@Override
 	public boolean hasNext() {
 		// TODO Auto-generated method stub
-		return this.node.getNext() != null;
+		return this.node != null;
 	}
 
 	@Override
@@ -23,9 +23,6 @@ public class MyIterator implements Iterator<Integer>{
 	}
 	
 	public Node get() {
-		if(this.node == null) {
-			return null;
-		}
 		return this.node;
 	}
 

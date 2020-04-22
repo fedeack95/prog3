@@ -16,14 +16,16 @@ protected int size;
 		this.size++;
 		this.first = tmp;
 	}
-	
+	//poner el primero en una variable
 	public Integer extractFront() {
-		this.first =this.first.getNext(); 
-		this.size--;
+		Integer current = this.first.getInfo();
 		if(this.first == null) {
 			return null;
 		}
-		return this.first.getInfo();
+		this.first =this.first.getNext(); 
+		this.size--;
+		
+		return current;
 	}
 
 	public boolean isEmpty() {
